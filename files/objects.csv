@@ -1,0 +1,12 @@
+source,key
+/Users/nicolas/Documents/Content_Library/Templates/Vault/kms-01a.corp.local-0.vmdk,/ContentLib/Vault/kms-01a.corp.local-0.vmdk
+/Users/nicolas/Documents/Content_Library/Templates/Vault/kms-01a.corp.local.ovf,/ContentLib/Vault/kms-01a.corp.local.ovf
+/Users/nicolas/Documents/Content_Library/Templates/Vault/kms-01a.corp.local.mf,/ContentLib/Vault/kms-01a.corp.local.mf
+/Users/nicolas/Documents/Content_Library/Templates/Vault/kms-01a.corp.local.nvram,/ContentLib/Vault/kms-01a.corp.local.nvram
+/Users/nicolas/Documents/Content_Library/Templates/Vyos/vyos_vmware_image.vmdk,/ContentLib/Vyos/vyos_vmware_image.vmdk
+/Users/nicolas/Documents/Content_Library/Templates/Vyos/vyos_vmware_image.ovf,/ContentLib/Vyos/vyos_vmware_image.ovf
+/Users/nicolas/Documents/Content_Library/Templates/Vyos/vyos_vmware_image.mf,/ContentLib/Vyos/vyos_vmware_image.mf
+/Users/nicolas/Documents/Content_Library/ISOs/rhel_7_9.iso,/ContentLib/ISO/rhel_7_9.iso
+/Users/nicolas/Documents/Content_Library/ISOs/ubuntu_20_04.iso,ContentLib/ISO/ubuntu_20_04.iso
+/Users/nicolas/Documents/Content_Library/ISOs/ubuntu_18_04.iso,ContentLib/ISO/ubuntu_18_04.iso
+/Users/nicolas/Documents/Content_Library/ISOs/centos_7_9.iso,ContentLib/ISO/centos_7_9.iso
