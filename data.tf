@@ -21,7 +21,7 @@ data "vsphere_datastore" "datastore" {
 }
 
 data "vsphere_content_library_item" "vyos" {
-  depends_on = [vsphere_content_library.new]
+  depends_on = [vsphere_content_library.new, null_resource.wait]
   name       = "Vyos"
   library_id = vsphere_content_library.new.id
   type       = "OVF"

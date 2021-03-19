@@ -39,7 +39,7 @@ resource "vsphere_content_library" "new" {
   depends_on = [null_resource.prep_content_library, aws_s3_bucket_policy.content_library]
   name       = "hashi_library"
   subscription {
-    subscription_url      = "http://vmware-lab-bucket.s3.eu-west-1.amazonaws.com/ContentLib/lib.json"
+    subscription_url      = "http://${aws_s3_bucket.content_library.bucket_domain_name}/ContentLib/lib.json"
     authentication_method = "NONE"
     on_demand             = false
     automatic_sync        = true
@@ -47,7 +47,20 @@ resource "vsphere_content_library" "new" {
   storage_backing = [data.vsphere_datastore.datastore.id]
 }
 
+resource "null_resource" "wait" {
+  depends_on = [vsphere_content_library.new]
+
+  triggers = {
+    objects = length(vsphere_content_library.new.id)
+  }
+
+  provisioner "local-exec" {
+    command = "sleep 180"
+  }
+}
+
 resource "vsphere_virtual_machine" "vyos" {
+  depends_on = [vsphere_host_virtual_switch.internal,vsphere_host_port_group.external,vsphere_host_port_group.internal]
   name             = "router01"
 #  datacenter_id    = data.vsphere_datacenter.dc.id
   host_system_id   = data.vsphere_host.hosts[0].id
