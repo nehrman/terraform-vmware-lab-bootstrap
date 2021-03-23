@@ -1,7 +1,7 @@
 provider "vsphere" {
-  user           = "administrator@vsphere.local"
-  password       = "G9kEQ7=T]e|w^-[We"
-  vsphere_server = "vcsa.my-v-world.fr"
+  user           = var.vc_username
+  password       = var.vc_password
+  vsphere_server = var.vc.server
 
   # If you have a self-signed cert
   allow_unverified_ssl = true

@@ -1,3 +1,15 @@
+variable "vc_username" {
+  description = "Defines VC Username for connection"
+}
+
+variable "vc_password" {
+  description = "Defines VC Password for connection"
+}
+
+variable "vc_servername" {
+  description = "Defines VC Server for connection"
+}
+
 variable "bucket_name" {
   description = "Defines the S3 Bucket Name"
   default     = "vmware-lab-bucket"
